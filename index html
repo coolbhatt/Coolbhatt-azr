@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acme Data Analytics & BI</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="hero">
+    <nav class="nav">
+        <div class="logo">Acme<span>Insights</span></div>
+        <ul class="nav-links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#solutions">Solutions</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero-content">
+        <div class="hero-text">
+            <h1>Turn Data Into Decisions</h1>
+            <p>
+                We design modern data analytics and business intelligence solutions
+                that deliver trusted, self-service insights to your organization.
+            </p>
+            <div class="hero-actions">
+                <a href="#contact" class="btn primary">Request a Consultation</a>
+                <a href="#solutions" class="btn secondary">View Sample Dashboards</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="kpi-card">
+                <p class="kpi-label">Revenue YoY</p>
+                <p class="kpi-value">+18.4%</p>
+            </div>
+            <div class="kpi-card">
+                <p class="kpi-label">Report Adoption</p>
+                <p class="kpi-value">92%</p>
+            </div>
+            <canvas id="sampleChart"></canvas>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section id="services" class="section">
+        <h2>Analytics & BI Services</h2>
+        <p class="section-intro">
+            From data strategy to dashboard implementation, we help you build
+            an analytics ecosystem that scales.
+        </p>
+        <div class="card-grid">
+            <article class="card">
+                <h3>Data Strategy & Roadmap</h3>
+                <p>
+                    Assess your current landscape, define KPIs, and prioritize
+                    analytics use cases aligned to business outcomes.
+                </p>
+            </article>
+            <article class="card">
+                <h3>Modern Data Platform</h3>
+                <p>
+                    Design cloud-first data architectures for reporting, advanced
+                    analytics, and self-service BI.
+                </p>
+            </article>
+            <article class="card">
+                <h3>Dashboards & Self-Service BI</h3>
+                <p>
+                    Build intuitive dashboards, metrics layers, and governance
+                    so teams can trust and use data every day.
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <section id="solutions" class="section section-alt">
+        <h2>Sample Analytics Use Cases</h2>
+        <p class="section-intro">
+            Illustrative examples of the types of insights we help deliver.
+        </p>
+        <div class="card-grid">
+            <article class="card">
+                <h3>Executive KPI Overview</h3>
+                <ul class="bullet-list">
+                    <li>Revenue, margin, and pipeline in one view</li>
+                    <li>Drill-down from region to customer to product</li>
+                    <li>Alerts when KPIs move outside thresholds</li>
+                </ul>
+            </article>
+            <article class="card">
+                <h3>Operational Performance</h3>
+                <ul class="bullet-list">
+                    <li>Order-to-cash and fulfillment SLAs</li>
+                    <li>Bottleneck identification and root-cause views</li>
+                    <li>Daily trend and anomaly detection</li>
+                </ul>
+            </article>
+            <article class="card">
+                <h3>Customer & Product Analytics</h3>
+                <ul class="bullet-list">
+                    <li>Customer segmentation and churn risk</li>
+                    <li>Product profitability and lifecycle views</li>
+                    <li>Campaign performance and attribution</li>
+                </ul>
+            </article>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Get in Touch</h2>
+        <p class="section-intro">
+            Share a bit about your data landscape and goals, and we will follow
+            up with a tailored conversation.
+        </p>
+        <form class="contact-form" id="contactForm">
+            <div class="form-row">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" required />
+            </div>
+            <div class="form-row">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required />
+            </div>
+            <div class="form-row">
+                <label for="company">Company</label>
+                <input id="company" name="company" type="text" />
+            </div>
+            <div class="form-row">
+                <label for="message">What are you trying to achieve?</label>
+                <textarea id="message" name="message" rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn primary">Submit</button>
+            <p id="formStatus" class="form-status" aria-live="polite"></p>
+        </form>
+    </section>
+</main>
+
+<footer class="footer">
+    <p>© <span id="year"></span> Acme Insights · Data Analytics & Business Intelligence</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
